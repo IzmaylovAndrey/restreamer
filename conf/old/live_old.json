@@ -11,7 +11,7 @@
                 "-vcodec copy",
                 "-acodec libfdk_aac",
                 "-map_metadata -1",
-		"-g 16",
+                "-g 20",
                 "-metadata application=autopilot",
                 "-metadata server=NGINX-RTMP",
                 "-f flv"
@@ -25,7 +25,7 @@
                 "-map 1:0",
                 "-shortest",
                 "-map_metadata -1",
-                "-metadata application=autopilot2.0",
+                "-metadata application=datarhei/Restreamer",
                 "-metadata server=NGINX-RTMP",
                 "-f flv"
             ],
@@ -65,7 +65,7 @@
             "name": "RS_LOGGER_LEVEL",
             "alias": "LOGGER_LEVEL",
             "type": "int",
-            "defaultValue": "3",
+            "defaultValue": "4",
             "required": true,
             "description": "Logger level to defined, what should be logged"
         },
@@ -81,7 +81,7 @@
             "name": "RS_SNAPSHOT_REFRESH_INTERVAL",
             "alias": "SNAPSHOT_REFRESH_INTERVAL",
             "type": "string",
-            "defaultValue": "1",
+            "defaultValue": "30s",
             "required": false,
             "description": "Interval to create a new Snapshot (in minutes)"
         },
@@ -105,7 +105,7 @@
             "name": "RS_PASSWORD",
             "alias": "RESTREAMER_PASSWORD",
             "type": "string",
-            "defaultValue": "tstadmin81",
+            "defaultValue": "datarhei",
             "required": false,
             "description": "Backend login password"
         }
